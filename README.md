@@ -20,7 +20,7 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
-python mdcr_analise.py
+python mdcr_analise.py --files "dados/*" --db warehouse.duckdb --out saida/
 ```
 
 ### Resultados
