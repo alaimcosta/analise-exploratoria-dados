@@ -1,0 +1,19 @@
+# Arquivos de dados
+/dados/
+
+# Arquivos gerados pelo programa
+/saida/
+
+# Banco de dados local
+*.duckdb
+*.duckdb.wal
+
+# Ambiente virtual Python
+.venv/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+
+# Segredos e configurações locais
+.env
