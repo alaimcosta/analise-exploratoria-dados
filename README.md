@@ -1,6 +1,15 @@
 ## Análise de dados
 
-### 1. Como executar o programa:
+### 1. Criar pasta na raiz do projeto
+```
+/dados
+```
+
+### 2. Baixar arquivos do Banco Central e adicionar na pasta criada anteriormente
+
+Link para download: https://www.bcb.gov.br/estabilidadefinanceira/micrrural 
+
+### 3. Executar programa:
 
 ```bash
 cd dados-dc
@@ -14,7 +23,7 @@ pip install -r requirements.txt
 python mdcr_analise.py
 ```
 
-### 2. Resultados
+### Resultados
 
 ```
 dicionario_dados_result.md
