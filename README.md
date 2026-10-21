@@ -13,3 +13,9 @@ pip install -r requirements.txt
 
 python mdcr_analise.py
 ```
+
+### 2. Resultados
+
+```
+dicionario_dados_result.md
+```
