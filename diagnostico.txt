@@ -1,0 +1,135 @@
+== tabelas e contagens ==
+credito 10716843
+dim_categ 6
+dim_emp 3316
+dim_fonte 37
+dim_if 650
+dim_programa 40
+mart_faixa_distribuicao 872877
+mart_funding_mix 726
+mart_market_share 768322
+mart_oportunidade_beneficiario 450
+mart_oportunidade_genero 75
+mart_oportunidade_porte 165
+mart_preco_benchmark 364
+mart_share_uf 181303
+perfil_tomador 286050
+
+== colunas ==
+credito [('ref_bacen', 'VARCHAR'), ('ano', 'VARCHAR'), ('competencia', 'VARCHAR'), ('ano_safra', 'VARCHAR'), ('uf', 'VARCHAR'), ('municipio', 'VARCHAR'), ('valor', 'DOUBLE'), ('juros', 'DOUBLE'), ('custo_efetivo', 'DOUBLE'), ('cnpj', 'VARCHAR'), ('nome_if', 'VARCHAR'), ('segmento', 'VARCHAR'), ('is_coop', 'BOOLEAN'), ('finalidade', 'VARCHAR'), ('programa', 'VARCHAR'), ('fonte', 'VARCHAR'), ('porte', 'VARCHAR'), ('produto', 'VARCHAR')]
+perfil_tomador [('cdSexo', 'VARCHAR'), ('cdCNPJCoope', 'VARCHAR'), ('Cnpj', 'VARCHAR'), ('nomeIF', 'VARCHAR'), ('Segmento', 'VARCHAR'), ('nomeSegmento', 'VARCHAR'), ('Categoria', 'VARCHAR'), ('MesEmissao', 'VARCHAR'), ('AnoEmissao', 'VARCHAR'), ('cdPrograma', 'VARCHAR'), ('cdSubPrograma', 'VARCHAR'), ('cdFonteRecurso', 'VARCHAR'), ('cdTipoBeneficiario', 'VARCHAR'), ('Atividade', 'VARCHAR'), ('QtdCusteio', 'BIGINT'), ('VlCusteio', 'DOUBLE'), ('QtdInvestimento', 'BIGINT'), ('VlInvestimento', 'DOUBLE'), ('QtdComercializacao', 'BIGINT'), ('VlComercializacao', 'DOUBLE'), ('QtdIndustrializacao', 'BIGINT'), ('VlIndustrializacao', 'DOUBLE'), ('AreaCusteio', 'DOUBLE'), ('AreaInvestimento', 'DOUBLE'), ('competencia', 'VARCHAR'), ('VlTotal', 'DOUBLE'), ('QtdTotal', 'BIGINT'), ('genero', 'VARCHAR'), ('tipo_beneficiario', 'VARCHAR')]
+
+== credito: periodo ==
+[('2022', '2026', '2022-01', '2026-09')]
+[('Safra 21/22', 822045, 146.25), ('Safra 22/23', 1995301, 360.67), ('Safra 23/24', 2385914, 421.97), ('Safra 24/25', 2327344, 383.34), ('Safra 25/26', 2558820, 353.22), ('Safra 26/27', 627419, 85.44)]
+
+== municipio ==
+% linhas nulas / % valor nulo: [(19.1, 62.13)]
+amostra: [('4125605',), ('2913804',), ('4313011',), ('2921450',), ('2902104',)]
+
+== dimensoes (distintos e amostras) ==
+uf (27): ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']
+finalidade (4): ['Comercialização', 'Custeio', 'Industrialização', 'Investimento']
+programa (14): ['ABC + "Programa para a Adaptação à Mudança do Clima e Baixa Emissão de Carbono', 'FINANCIAMENTO SEM VÍNCULO A PROGRAMA ESPECÍFICO', 'FUNCAFÉ (PROGRAMA DE DEFESA DA ECONOMIA CAFEEIRA)', 'INOVAGRO - Programa de Incentivo à Inovação Tecnológica na Produção Agropecuária', 'MODERAGRO - PROGRAMA DE MODERNIZAÇÃO DA AGRICULTURA E CONSERVAÇÃO DE RECURSOS NATURAIS', 'MODERFROTA - PROGRAMA DE MODERNIZAÇÃO DA FROTA DE TRATORES AGRÍCOLAS E IMPL ASSOC E COLHEITADEIRAS', 'PCA - Programa para Construção e Ampliação de Armazéns', 'PROCAP-AGRO (PROGRAMA DE CAPITALIZAÇÃO DAS COOPERATIVAS DE PRODUÇÃO AGROPECUÁRIAS)', 'PRODECOOP - PROGRAMA DE DESENVOLVIMENTO COOPERATIVO PARA AGREGAÇÃO DE VALOR À PRODUÇÃO AGROPECUÁRIA', 'PROGRAMA NACIONAL DE CRÉDITO FUNDIÁRIO (FTRA)', 'PROIRRIGA - antigo Moderinfra, alterado em 01/07/2021', 'PRONAF - PROGRAMA NACIONAL DE FORTALECIMENTO DA AGRICULTURA FAMILIAR', 'PRONAMP - PROGRAMA NACIONAL DE APOIO AO MÉDIO PRODUTOR RURAL', 'RenovAgro - Programa de Financiamento a Sistemas de Produção Agropecuária Sustentáveis']
+fonte (22): ['BNDES - LIVRE/NÃO CONTROLADA', 'BNDES/FINAME - EQUALIZADA - DIRECIONADA/CONTROLADA', 'CAPTAÇÃO EXTERNA - LIVRE/NÃO CONTROLADA', 'Exigibilidade Adicional dos Recursos à Vista - Resolução 5030 ENCERRADO', 'Exigibilidade Adicional dos Recursos à Vista - Resolução 5087 - ENCERRADO', 'Exigibilidade Adicional dos Recursos à Vista - Resolução 5157', 'FUNCAFE - FUNDO DE DEFESA DA ECONOMIA CAFEEIRA - DIRECIONADA/CONTROLADA', 'FUNDO CONSTITUCIONAL DE FINANCIAMENTO DO CENTRO-OESTE (FCO) - DIRECIONADA/CONTROLADA', 'FUNDO CONSTITUCIONAL DE FINANCIAMENTO DO NORDESTE (FNE) - DIRECIONADA/CONTROLADA', 'FUNDO CONSTITUCIONAL DE FINANCIAMENTO DO NORTE (FNO) - DIRECIONADA/CONTROLADA', 'FUNDO DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO (FNDCT) - MP 1374 – DIRECIONADA/CONTROLADA', 'FUNDO DE TERRAS E DA REFORMA AGRÁRIA - DIRECIONADA/CONTROLADA', 'GOVERNOS E FUNDOS ESTADUAIS OU MUNICIPAIS - DIRECIONADA/CONTROLADA', 'INCRA - DIRECIONADA/CONTROLADA', 'LETRA DE CRÉDITO DO AGRONEGÓCIO (LCA) - DIRECIONADA/NÃO CONTROLADA', 'LETRA DE CRÉDITO DO AGRONEGÓCIO (LCA) - EQUALIZADA - DIRECIONADA/CONTROLADA', 'OBRIGATÓRIOS - MCR 6.2 - DIRECIONADA/CONTROLADA', 'POUPANÇA RURAL - DIRECIONADA/NÃO CONTROLADA', 'POUPANÇA RURAL - EQUALIZADA - DIRECIONADA/CONTROLADA', 'RECURSOS LIVRES - EQUALIZADA - LIVRE/CONTROLADA', 'RECURSOS LIVRES - LIVRE/NÃO CONTROLADA', 'TESOURO NACIONAL - DIRECIONADA/CONTROLADA']
+porte (3): ['Grande Produtor Rural', 'Médio Produtor Rural', 'Pequeno Produtor Rural']
+produto (371): ['ABACATE', 'ABACAXI', 'ABELHA', 'ABERTURA DE GLEBAS RURAIS', 'ABOBRINHA', 'ABÓBORA-MORANGA', 'ACELGA', 'ACEROLA', 'ACÁCIA NEGRA', 'ADIANTAMENTO A COOPERADO POR PRODUTO ENTREGUE PARA VENDA, ESTOCAGEM DE PRODUTO FINAL', 'ADIANTAMENTOS A COOPERADOS POR CONTA DE PRODUTOS ENTREGUES PARA VENDA', 'ADUBAÇÃO INTENSIVA DO SOLO', 'ADUBAÇÃO ORGÂNICA/MINERAL, CALAGEM, SUBSTRATOS INERTES(PEDRA, AREIA, VERMICULITA, SILTE, ARGILA ETC)', 'AGAVE (SISAL)', 'AGRIÃO', 'AGROARTESANATO', 'AGROINDÚSTRIA', 'AIPO', 'ALCACHOFRA', 'ALFACE', 'ALFAFA', 'ALGODÃO', 'ALHO', 'ALHO PORÓ', 'AMEIXA', 'AMENDOIM', 'AMORA', 'ANDIROBA', 'ANIMAIS SILVESTRES', 'APICULTURA', 'AQUISIÇÃO DE AQUECEDORES, GERADORES, INCINERADORES, COMPRESSORES, VENTILADORES E APAR. DE AR CONDIC.', 'AQUISIÇÃO DE BENS PARA FORNECIMENTO AOS COOPERADOS', 'AQUISIÇÃO DE BENS PARA PRESTAÇÃO DE SERVIÇOS EXCLUSIVAMENTE EM EXPLORAÇÕES RURAIS', 'AQUISIÇÃO DE DESTILADORES, FILTROS, DEPURADORES E DOSADORES', 'AQUISIÇÃO DE EMPILHADEIRA(S)/TOMBADORA(S)', 'AQUISIÇÃO DE EQUIPAMENTO(S) TOPOGRAFICO(S)', 'AQUISIÇÃO DE EQUIPAMENTOS DE INFORMÁTICA E TELECOMUNICAÇÕES, INCLUINDO AQUISIÇÃO DE SOFTWARE', 'AQUISIÇÃO DE EQUIPAMENTOS PARA MANUTENÇÃO DE VEÍCULOS', 'AQUISIÇÃO DE EQUIPAMENTOS PARA MOLDAGEM, TORNOS, MOINHOS E PRENSA', 'AQUISIÇÃO DE FERRAMENTA PORTÁTIL MANUAL PARA TRATOS CULTURAIS']
+
+== credito por semestre x finalidade (valor em R$ bi, contratos distintos) ==
+('2022-S1', 'Comercialização', 18.093, 11768)
+('2022-S1', 'Custeio', 78.26, 350218)
+('2022-S1', 'Industrialização', 11.349, 626)
+('2022-S1', 'Investimento', 38.548, 349224)
+('2022-S2', 'Comercialização', 14.893, 11169)
+('2022-S2', 'Custeio', 129.449, 570796)
+('2022-S2', 'Industrialização', 10.501, 1029)
+('2022-S2', 'Investimento', 61.906, 446656)
+('2023-S1', 'Comercialização', 20.826, 17159)
+('2023-S1', 'Custeio', 80.266, 375990)
+('2023-S1', 'Industrialização', 5.171, 576)
+('2023-S1', 'Investimento', 37.656, 328178)
+('2023-S2', 'Comercialização', 30.588, 16275)
+('2023-S2', 'Custeio', 144.874, 573050)
+('2023-S2', 'Industrialização', 22.919, 1279)
+('2023-S2', 'Investimento', 64.316, 483205)
+('2024-S1', 'Comercialização', 23.531, 14916)
+('2024-S1', 'Custeio', 81.588, 451403)
+('2024-S1', 'Industrialização', 8.878, 624)
+('2024-S1', 'Investimento', 45.272, 406461)
+('2024-S2', 'Comercialização', 19.872, 11414)
+('2024-S2', 'Custeio', 127.206, 520291)
+('2024-S2', 'Industrialização', 13.551, 1044)
+('2024-S2', 'Investimento', 60.093, 482146)
+('2025-S1', 'Comercialização', 29.777, 13363)
+('2025-S1', 'Custeio', 81.225, 345038)
+('2025-S1', 'Industrialização', 9.13, 524)
+('2025-S1', 'Investimento', 42.482, 432892)
+('2025-S2', 'Comercialização', 19.139, 6436)
+('2025-S2', 'Custeio', 110.139, 447370)
+('2025-S2', 'Industrialização', 19.084, 1189)
+('2025-S2', 'Investimento', 50.245, 583341)
+('2026-S1', 'Comercialização', 19.317, 5910)
+('2026-S1', 'Custeio', 76.364, 322631)
+('2026-S1', 'Industrialização', 16.185, 579)
+('2026-S1', 'Investimento', 42.744, 564968)
+('2026-S2', 'Comercialização', 8.425, 2056)
+('2026-S2', 'Custeio', 52.212, 246524)
+('2026-S2', 'Industrialização', 6.085, 434)
+('2026-S2', 'Investimento', 18.721, 269036)
+
+== MDCR por semestre x finalidade (valor em R$ bi, soma de QTDE) ==
+CUSTEIO
+            valor_bi    qtde
+semestre                    
+2023-06-01    80.266  382809
+2023-12-01   144.874  581478
+2024-06-01    81.588  457069
+2024-12-01   127.206  526397
+2025-06-01    81.225  349247
+2025-12-01   110.139  456991
+2026-06-01    76.364  327337
+2026-12-01    52.113  248663
+INVESTIMENTO
+            valor_bi    qtde
+semestre                    
+2023-06-01    37.656  425316
+2023-12-01    64.316  704365
+2024-06-01    45.272  609753
+2024-12-01    60.093  708471
+2025-06-01    42.482  716827
+2025-12-01    50.244  911894
+2026-06-01    42.735  848336
+2026-12-01    18.521  371215
+COMERCIALIZACAO
+            valor_bi   qtde
+semestre                   
+2023-06-01    20.826  17237
+2023-12-01    30.588  16373
+2024-06-01    23.531  14960
+2024-12-01    19.872  11437
+2025-06-01    29.777  13385
+2025-12-01    19.139   6447
+2026-06-01    19.317   5912
+2026-12-01     8.379   2055
+INDUSTRIALIZACAO
+            valor_bi  qtde
+semestre                  
+2023-06-01     5.171   576
+2023-12-01    22.919  1292
+2024-06-01     8.878   624
+2024-12-01    13.551  1053
+2025-06-01     9.130   526
+2025-12-01    19.084  1190
+2026-06-01    16.185   583
+2026-12-01     6.083   435
+
+TOTAL_VALOR por semestre (R$ bi):
+ANO_SEMESTRE_EMISSAO
+2023-06-01    143.918
+2023-12-01    262.696
+2024-06-01    159.271
+2024-12-01    220.722
+2025-06-01    162.615
+2025-12-01    198.606
+2026-06-01    154.600
+2026-12-01     85.096

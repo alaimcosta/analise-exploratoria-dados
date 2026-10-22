@@ -26,5 +26,11 @@ python mdcr_analise.py --files "dados/*" --db warehouse.duckdb --out saida/
 ### Resultados
 
 ```
-dicionario_dados_result.md
+dicionario_dados_integracao.md
+```
+
+
+#### Comando para gerar arquivo de análise do warehouse
+```
+python warehouse.py warehouse_copy.duckdb "dados/*.csv" > diagnostico.txt
 ```
